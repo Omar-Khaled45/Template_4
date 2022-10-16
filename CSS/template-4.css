@@ -117,6 +117,47 @@ body {
   bottom: -10px;
 }
 
+.switch input {
+  display: none;
+}
+
+.switch .switch-btn {
+  width: 78px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+
+.switch .switch-btn::before {
+  content: "off";
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(160, 160, 160);
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: var(--mainTransition);
+}
+
+.switch input:checked + .switch-btn {
+  background-color: var(--blue);
+}
+
+.switch input:checked + .switch-btn::before {
+  content: "on";
+  color: var(--blue);
+  transform: translateX(46px);
+}
 /* End Framework */
 /* Start Animation */
 @keyframes on-off {
@@ -266,6 +307,7 @@ body {
   border: 1px solid #ccc;
   padding-left: 10px;
   border-radius: 10px;
+  caret-color: var(--blue);
   display: flex;
   align-items: center;
 }
@@ -1110,3 +1152,372 @@ body {
 }
 /* End Projects-Table */
 /* End Dashboard */
+/* Start Settings */
+.settings .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+  margin: 0 20px 20px;
+}
+
+@media (max-width: 767px) {
+  .settings .container {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+
+.settings .container .card {
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+/* Start Site-Control */
+.settings .container .control .control-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings .container .control .control-toggle .text span {
+  font-size: 13px;
+  color: var(--grey);
+  margin: 5px 0 13px;
+  display: block;
+}
+
+.settings .container .control textarea {
+  width: 100%;
+  min-height: 150px;
+  resize: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  caret-color: var(--blue);
+}
+
+.settings .container .control textarea::placeholder {
+  transition: var(--mainTransition);
+}
+
+.settings .container .control textarea:focus {
+  outline: none;
+}
+
+.settings .container .control textarea:focus::placeholder {
+  opacity: 0;
+}
+/* End Site-Control */
+/* Start General Info */
+.settings .container .gen-info .input {
+  margin-bottom: 15px;
+} 
+
+.settings .container .gen-info .input label {
+  margin-bottom: 10px;
+  color: var(--grey);
+  font-size: 14px;
+  display: block;
+}
+
+.settings .container .gen-info .input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  caret-color: var(--blue);
+}
+
+.settings .container .gen-info .input input:focus {
+  outline: none;
+}
+
+.settings .container .gen-info .input input::placeholder {
+  transition: var(--mainTransition);
+}
+
+.settings .container .gen-info .input input:focus::placeholder {
+  opacity: 0;
+}
+
+.settings .container .gen-info .input div {
+  display: flex;
+  align-items: center;
+}
+
+.settings .container .gen-info .input div [id = "email"] {
+  margin-right: 10px;
+  background-color: #f0f4f8;
+  color: #bbb;
+  cursor: no-drop;
+}
+
+.settings .container .gen-info .input div a {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* End General Info */
+/* Start Security Info */
+.settings .container .sec-info .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.settings .container .sec-info .box:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.settings .container .sec-info .box .text span {
+  margin-top: 5px;
+  margin-bottom: 13px;
+  color: var(--grey);
+  display: block;
+  font-size: 13px;
+}
+
+.settings .container .sec-info .box .change-btn,
+.settings .container .sec-info .box .device-btn  {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: var(--mainTransition);
+}
+
+.settings .container .sec-info .box .change-btn {
+  background-color: var(--blue);
+  color: white;
+}
+
+.settings .container .sec-info .box .change-btn:hover {
+  background-color: var(--blueAlt);
+}
+
+.settings .container .sec-info .box .device-btn {
+  background-color: #eee;
+  color: black;
+}
+
+.settings .container .sec-info .box .device-btn:hover {
+  background-color: #ddd;
+}
+/* End Security Info */
+/* Start Social Info */
+.settings .container .social-info .social-app {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.settings .container .social-info .social-app i {
+  color: var(--grey);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  transition: var(--mainTransition);
+}
+
+.settings .container .social-info .social-app:focus-within i {
+  color: black;
+}
+
+.settings .container .social-info .social-app input {
+  padding: 1px 2px 1px 10px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 0 6px 6px 0;
+  width: 100%;
+  caret-color: var(--blue);
+  background-color: #f6f6f6;
+}
+
+.settings .container .social-info .social-app input:focus {
+  outline: none;
+}
+
+.settings .container .social-info .social-app input::placeholder {
+  transition: var(--mainTransition)
+}
+
+.settings .container .social-info .social-app input:focus::placeholder {
+  opacity: 0;
+}
+/* End Social Info */
+/* Start Widgets Control */
+.settings .container .widgets .list-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.settings .container .widgets .list-items input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.settings .container .widgets .list-items label {
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.settings .container .widgets .list-items label::before,
+.settings .container .widgets .list-items label::after {
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+}
+
+.settings .container .widgets .list-items label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey);
+}
+
+.settings .container .widgets .list-items label:hover::before {
+  border-color: var(--blue);
+}
+
+.settings .container .widgets .list-items label::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  background-color: var(--blue);
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  transition: var(--mainTransition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0) rotate(360deg);
+}
+
+.settings .container .widgets .list-items input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
+}
+/* End Widgets Control */
+/* Start Backup Manager */
+.settings .container .backup .list-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.settings .container .backup .list-items input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.settings .container .backup .list-items label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.settings .container .backup .list-items label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--grey);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -11px;
+}
+
+.settings .container .backup .list-items label:hover::before {
+  border-color: var(--blue);
+}
+
+.settings .container .backup .list-items input[type="radio"]:checked + label::before {
+  border-color: var(--blue);
+}
+
+.settings .container .backup .list-items label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  margin-top: -6px;
+  transition: var(--mainTransition);
+  transform: scale(0);
+  opacity: 0.2;
+}
+
+.settings .container .backup .list-items label:hover::after {
+  transform: scale(1);
+}
+
+.settings .container .backup .list-items input[type="radio"]:checked + label::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.settings .container .backup .box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.settings .container .backup .box-container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  flex-basis: calc(100% / 3);
+}
+
+@media (max-width: 767px) {
+  .settings .container .backup .box-container {
+    flex-direction: column;
+  }
+}
+
+.settings .container .backup .box-container .box input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.settings .container .backup .box-container .box label {
+  cursor: pointer;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  transition: var(--mainTransition);
+}
+
+.settings .container .backup .box-container .box label i {
+  margin-bottom: 10px;
+}
+
+.settings .container .backup .box-container .box span {
+  display: block;
+}
+
+.settings .container .backup .box-container .box input[type="radio"]:checked + label {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+/* End Backup Manager */
+/* End Settings */

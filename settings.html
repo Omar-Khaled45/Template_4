@@ -93,6 +93,185 @@
         <div class="section-title ">
           <h1>Settings</h1>
         </div>
+        <div class="container">
+          <!-- Start Site-Control -->
+          <div class="card control">
+            <div class="card-title-s">
+              <h2>Site Control</h2>
+              <span>Control The Website If There Is Maintenance</span>
+            </div>
+            <div class="control-toggle">
+              <div class="text">
+                <p>Website Control</p>
+                <span>Open/Close Website And Type The Reason</span>
+              </div>
+              <div class="switch">
+                <label>
+                  <input type="checkbox" checked>
+                  <div class="switch-btn"></div>
+                </label>
+              </div>
+            </div>
+            <textarea placeholder="Close Message Content"></textarea>
+          </div>
+          <!-- End Site-Control -->
+          <!-- Start General Info -->
+          <div class="card gen-info">
+            <div class="card-title-s">
+              <h2>General Info</h2>
+              <span>General Information About Your Account</span>
+            </div>
+            <div class="input">
+              <label for="first">First Name</label>
+              <input type="text" id="first" placeholder="First Name">
+            </div>
+            <div class="input">
+              <label for="last">Last Name</label>
+              <input type="text" id="last" placeholder="Last Name">
+            </div>
+            <div class="input">
+              <label for="email">Email</label>
+              <div>
+                <input type="email" id="email" value="o@nn.sa" disabled>
+                <a href="#" class="c-b">Change</a>
+              </div>
+            </div>
+          </div>
+          <!-- End General Info -->
+          <!-- Start Security-info -->
+          <div class="card sec-info">
+            <div class="card-title-s">
+              <h2>Security Info</h2>
+              <span>Security Information About Your Account</span>
+            </div>
+            <div class="box">
+              <div class="text">
+                <p>Password</p>
+                <span>Last Change On 25/10/2021</span>
+              </div>
+              <a href="#" class="change-btn">Change</a>
+            </div>
+            <div class="box">
+              <div class="text">
+                <p>Two-Factor Authentication</p>
+                <span>Enable/Disable The Feature</span>
+              </div>
+              <div class="switch">
+                <label>
+                  <input type="checkbox" checked>
+                  <div class="switch-btn"></div>
+                </label>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <p>Devices</p>
+                <span>Check The Login Devices List</span>
+              </div>
+              <a href="#" class="device-btn">Devices</a>
+            </div>
+          </div>
+          <!-- End Security-info -->
+          <!-- Start Social-info -->
+          <div class="card social-info">
+            <div class="card-title-s">
+              <h2>Social Info</h2>
+              <span>Social Media Information/span>
+            </div>
+            <div class="social-app">
+              <i class="fa-brands fa-twitter"></i>
+              <input type="text" placeholder="Twitter Username">
+            </div>
+            <div class="social-app">
+              <i class="fa-brands fa-facebook-f"></i>
+              <input type="text" placeholder="Facebook Username">
+            </div>
+            <div class="social-app">
+              <i class="fa-brands fa-linkedin"></i>
+              <input type="text" placeholder="Linkedin Username">
+            </div>
+            <div class="social-app">
+              <i class="fa-brands fa-youtube"></i>
+              <input type="text" placeholder="Youtube Username">
+            </div>
+          </div>
+          <!-- End Social-info -->
+          <!-- Start Widgets -->
+          <div class="card widgets">
+            <div class="card-title-s">
+              <h2>Widgets Control</h2>
+              <span>Show/Hide Widgets</span>
+            </div>
+            <div class="list-items">
+              <input type="checkbox" id="draft" checked>
+              <label for="draft">Quick Draft</label>
+            </div>
+            <div class="list-items">
+              <input type="checkbox" id="targets">
+              <label for="targets">Yearly Targets</label>
+            </div>
+            <div class="list-items">
+              <input type="checkbox" id="statistics">
+              <label for="statistics">Tickets Statistics</label>
+            </div>
+            <div class="list-items">
+              <input type="checkbox" id="news">
+              <label for="news">Latest News</label>
+            </div>
+            <div class="list-items">
+              <input type="checkbox" id="tasks" checked>
+              <label for="tasks">Latest Tasks</label>
+            </div>
+            <div class="list-items">
+              <input type="checkbox" id="top-search" checked>
+              <label for="top-search">Top Search Itemsr</label>
+            </div>
+          </div>
+          <!-- End Widgets -->
+          <!-- Start Backup Manager -->
+          <div class="card backup">
+            <div class="card-title-s">
+              <h2>Backup Manager</h2>
+              <span>Control Backup Time And Location</span>
+            </div>
+            <div class="list-items">
+              <input type="radio" name="date" id="daily" checked>
+              <label for="daily">Daily</label>
+            </div>
+            <div class="list-items">
+              <input type="radio" name="date" id="weekly">
+              <label for="weekly">Weekly</label>
+            </div>
+            <div class="list-items">
+              <input type="radio" name="date" id="monthly">
+              <label for="monthly">Monthly</label>
+            </div>
+            <div class="box-container">
+              <div class="box">
+                <input type="radio" name="server" id="megaman" checked>
+                <label for="megaman">
+                  <i class="fa-solid fa-server"></i>
+                  <span>Megaman</span>
+                </label>
+              </div>
+              <div class="box">
+                <input type="radio" name="server" id="zero">
+                <label for="zero">
+                  <i class="fa-solid fa-server"></i>
+                  <span>Zero</span>
+                </label>
+              </div>
+              <div class="box">
+                <input type="radio" name="server" id="sigma">
+                <label for="sigma">
+                  <i class="fa-solid fa-server"></i>
+                  <span>Sigma</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- End Backup Manager -->
+        </div>
       </div>
       <!-- End Settings -->
     </div>
