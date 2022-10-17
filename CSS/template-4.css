@@ -342,6 +342,7 @@ body {
 
 .page .page-content .header .notifications .icon {
   position: relative;
+  cursor: pointer;
 }
 
 .page .page-content .header .notifications .icon:hover {
@@ -368,6 +369,7 @@ body {
   width: 32px;
   height: 32px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 /* End Header */
@@ -1521,3 +1523,223 @@ body {
 }
 /* End Backup Manager */
 /* End Settings */
+/* Start Profile */
+.profile {
+  margin: 20px;
+}
+
+.profile .main-info {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.profile .main-info .name-card {
+  padding: 20px;
+  text-align: center;
+  flex-basis: 25%;
+  border-right: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+  .profile .main-info {
+    flex-direction: column;
+  }
+
+  .profile .main-info .name-card {
+    border-right: none;
+  }
+}
+
+.profile .main-info .name-card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.profile .main-info .name-card p {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.profile .main-info .name-card .level-bar {
+  width: 70%;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.profile .main-info .name-card .level-bar span {
+  background-color: var(--blue);
+  display: block;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.profile .main-info .name-card .stars {
+  margin: 10px 0;
+}
+
+.profile .main-info .name-card .rate {
+  font-size: 13px;
+}
+.profile .main-info .details {
+  flex: 1;
+}
+
+.profile .main-info .details .box {
+  padding: 20px;
+}
+
+.profile .main-info .details .box .box-title {
+  font-size: 15px;
+}
+
+.profile .main-info .details .box .box-data {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.profile .main-info .details .box .switch {
+  margin-top: 10px;
+}
+
+.profile .main-info .details .box .switch-btn {
+  height: 20px;
+}
+
+.profile .main-info .details .box .switch-btn::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+}
+
+.profile .main-info .details .box .switch input:checked + .switch-btn::before {
+  transform: translateX(58px);
+}
+
+@media (max-width: 767px) {
+  .profile .main-info .details .box {
+    text-align: center;
+  }
+
+  .profile .main-info .details .box .box-data {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .profile .main-info .details .box .box-data div {
+    margin-top: 10px;
+  }
+
+  .profile .main-info .details .box .switch-btn  {
+    margin: 10px auto 0;
+  }
+}
+
+.profile .another-info {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .profile .another-info {
+    flex-direction: column;
+  }
+}
+
+.profile .another-info .card {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.profile .another-info .skills {
+  flex-basis: calc(100% / 3);
+}
+
+.profile .another-info .skills ul {
+  list-style: none;
+}
+
+.profile .another-info .skills ul li {
+  padding: 15px 0;
+}
+
+.profile .another-info .skills ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+  .profile .another-info .skills ul li {
+    text-align: center;
+  }
+}
+
+.profile .another-info .skills ul li span {
+  padding: 4px 10px;
+  background-color: #eee;
+  font-size: 14px;
+  margin-right: 5px;
+  border-radius: 6px;
+}
+
+.profile .another-info .activities {
+  flex: 1;
+}
+
+.profile .another-info .activities .act-list .act {
+  display: flex;
+  align-items: center;
+}
+
+.profile .another-info .activities .act-list .act:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.profile .another-info .activities .act-list .act img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+
+.profile .another-info .activities .act-list .act span {
+  display: block;
+}
+
+
+.profile .another-info .activities .act-list .act .text span:first-child,
+.profile .another-info .activities .act-list .act .time span:first-child {
+  margin-bottom: 10px;
+}
+
+.profile .another-info .activities .act-list .act .time {
+  margin-left: auto;
+  text-align: end;
+}
+
+@media (max-width: 767px) {
+  .profile .another-info .activities .act-list .act {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile .another-info .activities .act-list .act img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile .another-info .activities .act-list .act .time {
+    margin-left: 0;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+/* End Profile */
