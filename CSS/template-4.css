@@ -1484,18 +1484,13 @@ body {
 
 .settings-page .container .backup .box-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   padding-top: 20px;
-  width: 100%;
 }
 
 .settings-page .container .backup .box-container .box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   width: 100%;
   flex-basis: calc(100% / 3);
